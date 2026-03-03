@@ -4,7 +4,7 @@ public class CalculatorController {
     private CalculatorFrame view;
     private CalculatorModel model;
 
-    /* 関数ヘッダー：*/
+    
 
     /* 関数ヘッダー：コンストラクターとして下記を処理
 
