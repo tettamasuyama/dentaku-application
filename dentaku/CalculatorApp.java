@@ -1,18 +1,38 @@
 import javax.swing.SwingUtilities;
 
-public class CalculatorApp{
-	/*関数ヘッダー：このプログラムのスタート地点を宣言している。
-	詳細：swingのユティリティークラスの内のinvokeLaterメソッドを使い、
-	GUIの処理を 「 正しいタイミングかつ、正しいスレッド 」で実行するための仕組み。
-	※GUI 画面を見て操作（ボタン・マウス）
-	※CUI 文字だけ(consoleなど)
-	※UI 人が操作する「見える・触れる部分」ボタン 文字入力欄 メニュー 画面レイアウト クリック・タップできるところ。
-	*/
-	public static void main(String [] args) {
+/**
+ * 電卓アプリケーションのエントリーポイントとなるクラス。
+ * <p>
+ * このクラスはアプリケーションを起動し、GUI（グラフィカルユーザーインターフェース）
+ * を表示する役割を持つ。
+ * </p>
+ */
+public class CalculatorApp {
+	/**
+	 * プログラムの開始地点（エントリーポイント）。
+	 * <p>
+	 * SwingUtilities の invokeLater メソッドを使用して、
+	 * GUI の処理を Event Dispatch Thread（EDT）上で実行する。
+	 * これにより、Swingアプリケーションを正しいスレッドで安全に起動できる。
+	 * </p>
+	 *
+	 * <p>
+	 * GUI（Graphical User Interface）とは、
+	 * ボタン・テキスト入力欄・メニューなどの
+	 * ユーザーが画面上で操作できる要素を持つインターフェースを指す。
+	 * </p>
+	 *
+	 * <p>
+	 * 対して CUI（Character User Interface）は、
+	 * コンソールなどで文字によって操作するインターフェースである。
+	 * </p>
+	 *
+	 * @param args コマンドライン引数
+	 */
+	public static void main(String[] args) {
 		SwingUtilities.invokeLater(() -> {
-            CalculatorFrame view = new CalculatorFrame();    // GUIの初期化
-            
-            
-        });
+			CalculatorFrame view = new CalculatorFrame(); // GUIの初期化
+
+		});
 	}
 }
